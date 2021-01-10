@@ -1,0 +1,210 @@
+.App {
+  text-align: center;
+}
+
+.calendarContainer {
+  box-sizing: border-box;
+  font-family: Calibri;
+  font-size: 1rem;
+  min-height: 100vh;
+  max-width: 100vw;
+  background: #249991;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.calendar {
+  background: #4fe3c1;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar > .date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.selectDate{
+  background: #4fe3c1;
+  color: #fff;
+  font-size: 1.2rem;
+  border: 0;
+  outline: 0;
+}
+
+.navbar > .arrow {
+  font-size: 2rem;
+  padding: 20px 10px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.navbar > .arrow:hover {
+  opacity: 0.5;
+}
+
+.daysName {
+  display: grid;
+  grid-template-columns: repeat(7, 80px);
+  grid-template-rows: repeat(1, 50px);
+  background: white;
+  color: #e66b6b;
+}
+
+.daysName div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.days {
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(7, 80px);
+  grid-template-rows: repeat(6, 50px);
+}
+.selectedDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #4fe3c1;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.day {
+  cursor: pointer;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.day:hover {
+  border: 1px solid #9ba8b7;
+}
+.activeDate {
+  color: #6d7173;
+}
+.passiveDate {
+  color: #6d7173;
+  opacity: 0.7;
+}
+.selectedDate {
+  background: #4fe3c1;
+}
+.settedNotes {
+  color: #e66b6b;
+}
+
+.popupContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noteItem {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  color: #6d7173;
+}
+
+.noteData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #249991;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.noteData:hover {
+  color: #249991;
+}
+
+.noteDate {
+}
+.noteMessage {
+  text-align: left;
+}
+
+.popupContainer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+
+.popupContainer form {
+  width: 100%;
+}
+
+.navbarForm {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbarForm > .close {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e66b6b;
+  cursor: pointer;
+  justify-self: flex-start;
+}
+
+.popupContainer form > * {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.textarea {
+  width: 100%;
+}
+
+@media (max-width: 560px) {
+  .content {
+    margin: 0;
+  }
+  .daysName {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .days {
+    width: 100vw;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .navbar > .date {
+    font-size: 1.2rem;
+  }
+  .navbar > .arrow {
+    font-size: 1.5rem;
+    padding: 10px 5px;
+  }
+  .popupContainer {
+    width: 90%;
+  }
+}
